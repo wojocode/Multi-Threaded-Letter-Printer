@@ -10,7 +10,7 @@ public class Letters extends Thread {
     private List<Thread> threads = new ArrayList<>();
     private final int totalThreadsRuntimeInSeconds;
     private final int threadIntervalInSeconds;
-    public static boolean isRunning = true;
+    public boolean isRunning = true;
 
     public Letters(String input, int totalThreadsRuntimeInSeconds, int threadRunTimeInterval) {
         this.input = input;
@@ -47,7 +47,7 @@ public class Letters extends Thread {
         return threadIntervalInSeconds * 1000;
     }
 
-    public static void setRunning(boolean running) {
+    public void setRunning(boolean running) {
         isRunning = running;
     }
 }
