@@ -6,6 +6,7 @@ public class Main {
         for (Thread thread : letters.getThreads()) thread.start();
 
         Thread.sleep(letters.getTotalThreadsRuntimeInSeconds());
+        Letters.setRunning(false);
         System.out.println("\nProgram finished");
     }
 }
