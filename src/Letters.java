@@ -10,7 +10,7 @@ public class Letters extends Thread {
     private List<Thread> threads = new ArrayList<>();
     private final int totalThreadsRuntimeInSeconds;
     private final int threadIntervalInSeconds;
-    public boolean isRunning = true;
+    public volatile boolean isRunning = true;
 
     public Letters(String input, int totalThreadsRuntimeInSeconds, int threadRunTimeInterval) {
         this.input = input;
